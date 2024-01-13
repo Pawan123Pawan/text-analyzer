@@ -14,9 +14,9 @@ function TextAnalyzer() {
         </p>
         <nav className="wordtopara">
           <Link
-            to={"/word-input"}
+            to={"/"}
             className={`${
-              location.pathname == "/word-input" ? "active_button" : ""
+              location.pathname == "/" ? "active_button" : ""
             } button`}
           >
             word input

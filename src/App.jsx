@@ -11,7 +11,7 @@ function App() {
         <TextAnalyzer />
         {/* // route the page */}
         <Routes>
-          <Route path="word-input" element={<WordInput />} />
+          <Route path="/" element={<WordInput />} />
           <Route path="paragraph" element={<Paragraph />} />
         </Routes>
       </BrowserRouter>

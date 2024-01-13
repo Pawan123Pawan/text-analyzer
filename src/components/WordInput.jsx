@@ -2,28 +2,24 @@ import axios from "axios";
 import React, { useState } from "react";
 
 function WordInput() {
-  const [input, setInput] = useState("");
-  console.log(input);
+  const [inputText, setInput] = useState("");
+  const [analyzeText, setAnalyzeText] = useState({});
+
   // handleInputText implementation
-  async function handleInputText() {
-    const options = {
-      method: "GET",
-      url: "https://wordsapiv1.p.rapidapi.com/words/example/typeOf",
-      headers: {
-        "X-RapidAPI-Key": "147b7555ccmsh7916bc3d0385412p167555jsnd78240db8764",
-        "X-RapidAPI-Host": "wordsapiv1.p.rapidapi.com",
-      },
-    };
+  function handleInputText() {
+    // Calculate the number of characters
+    const numCharacters = inputText.length;
 
-    try {
-      const response = await axios.request(options);
-      const data = await response.json();
-      console.log(data);
-    } catch (error) {
-      console.error(error);
-    }
+    // Calculate the number of words
+    const wordsArray = inputText
+      .split(" ")
+      .filter((word) => word.trim() !== "");
+    const numWords = wordsArray.length;
+    setAnalyzeText({
+      characters: numCharacters,
+      words: numWords,
+    });
   }
-
   return (
     <div>
       {/* input process */}
@@ -32,7 +28,7 @@ function WordInput() {
           className="custom_input"
           type="text"
           placeholder="Text Note....."
-          value={input}
+          value={inputText}
           onChange={(e) => setInput(e.target.value)}
         />
         <button className="custom_button" onClick={handleInputText}>
@@ -50,31 +46,31 @@ function WordInput() {
         </thead>
         <tbody>
           <tr>
-            <td>5</td>
-            <td>3</td>
+            <td>{analyzeText?.characters}</td>
+            <td>{analyzeText?.words}</td>
           </tr>
         </tbody>
       </table>
 
       {/* definition contents */}
-      <div className="input_details">
+      <div className="input_details ">
         <div className="eachfield_details">
-          <div className="detail_tilte">Definition:</div>
+          <div className="detail_title">Definition:</div>
           <div className="title_dec">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi,
             sunt!
           </div>
         </div>
         <div className="eachfield_details">
-          <div className="detail_tilte">Parts of speech:</div>
+          <div className="detail_title">Parts of speech:</div>
           <div className="title_dec">Noun</div>
         </div>
         <div className="eachfield_details">
-          <div className="detail_tilte">Synonyms:</div>
+          <div className="detail_title">Synonyms:</div>
           <div className="title_dec">Noun</div>
         </div>
         <div className="eachfield_details">
-          <div className="detail_tilte">Antonyms:</div>
+          <div className="detail_title">Antonyms:</div>
           <div className="title_dec">Noun</div>
         </div>
       </div>
