@@ -1,8 +1,25 @@
-# React + Vite
+<.....Text Analyzer....>
+Description
+Text Analyzer is a web application designed to analyze and provide insights into textual content. It offers functionality to analyze words, characters, sentences, paragraphs, spaces, and punctuations within the provided text.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<.....Features......>
+Word Input: Analyze individual words with character and word count.
+Paragraph Input: Perform in-depth analysis, including characters, words, sentences, paragraphs, spaces, and punctuations.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<...Usage...>
+1.Clone the repository: git clone https://github.com/Pawan123Pawan/text-analyzer
+2.Install dependencies:cd text-analyzer
+                        npm install
+3.Run the application: npm run dev
+4.Open the browser and visit http://localhost:5173 to use the Text Analyzer.                        
+
+
+<...Technologies Used...>
+.React
+.React Router
+.Axios
+
+<....Contributors....>
+Your Name (Pawaan Kumar and email:pawanmaurya4277@gmail.com)
+Feel free to contribute by opening issues or creating pull requests.
