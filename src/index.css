@@ -1,0 +1,145 @@
+/* here add the font femily */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --font-color: #475467;
+  --body-color: #f8fbff;
+  --border-color:#e3e7ed;
+  --color:#ffffff;
+}
+body {
+  background: var(--body-color);
+}
+
+.container {
+  padding: 0 40px;
+}
+/* font-family: 'Poppins', sans-serif;
+font-family: 'Roboto', sans-serif; */
+/* write the title css here */
+.taxt_main_div {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.text_analyzer_tilte {
+  color: var(--font-color);
+  font-size: 45px;
+  font-weight: bold;
+  font-family: 'Poppins', sans-serif;
+}
+.text_analyzer_para {
+  color: var(--font-color);
+  font-size: 22px;
+  font-family: 'Roboto', sans-serif;
+}
+/* write the css of word and paragraph button */
+.wordtopara{
+  margin-top: 15px;
+  display: flex;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  width: 40%;
+}
+.button{
+  text-decoration: none;
+  color: var(--font-color);
+  padding: 8px;
+  width: 50%;
+  text-align: center;
+  font-size: 18px;
+  font-family: 'Poppins', sans-serif;
+  text-transform: capitalize;
+  cursor: pointer;
+  border-radius: 5px;
+  white-space: nowrap;
+}
+.active_button{
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  color: black;
+  background: var(--color);
+}
+ 
+
+/* here wite the css property of word input page */
+.process_input{
+  display: flex;
+  gap: 10px;
+  margin-top: 25px;
+  justify-content: space-between;
+}
+.custom_input{
+  width: 80%;
+  border: none;
+  padding: 10px 15px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  border: 2px solid var(--border-color);
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  border-radius: 8px;
+}
+.custom_input:focus{
+  outline: none;
+}
+.custom_button{
+  border: none;
+  background: #731EE2;
+  color: var(--color);
+  padding: 10px 20px;
+  font-size: 18px;
+  font-family: 'Poppins', sans-serif;
+  border-radius: 5px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.custom_button:hover{
+  transition: all 0.3s;
+  opacity: 0.9;
+}
+
+/* table css */
+table {
+  margin-top: 50px;
+  border-collapse: collapse;
+  width: 50%;
+}
+td {
+  border: 2px solid var(--border-color);
+  text-align: left;
+  padding: 10px 15px;
+  background: var(--color);
+  color: var(--font-color);
+  font-size: 18px;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* details css of input fields */
+.input_details{
+  display: flex;
+  flex-direction:column;
+  margin-top: 25px;
+  border: 2px solid var(--border-color);
+  border-radius: 3px;
+  padding: 15px 20px;
+  font-family: 'Poppins', sans-serif;
+  gap: 12px;
+}
+.eachfield_details{
+  display: flex;
+  gap: 20px;
+  
+}
+.detail_tilte{
+  color: var(--font-color);
+  font-weight: 500;
+  font-size: 18px;
+  min-width: 147px;
+  white-space: nowrap;
+}
+.title_dec{
+  font-size: 16px;
+}
