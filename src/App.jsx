@@ -1,22 +1,10 @@
 import React from "react";
-import TextAnalyzer from "./components/TextAnalyzer";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import WordInput from "./components/WordInput";
-import Paragraph from "./components/Paragraph";
+import ChipsInput from "./components/ChipsInput";
 
 function App() {
-  return (
-    <div className="container">
-      <BrowserRouter>
-        <TextAnalyzer />
-        {/* // route the page */}
-        <Routes>
-          <Route path="/" element={<WordInput />} />
-          <Route path="paragraph" element={<Paragraph />} />
-        </Routes>
-      </BrowserRouter>
-    </div>
-  );
+  return <div style={{width:"80%",margin:"0 auto"}}>
+    <ChipsInput/>
+  </div>;
 }
 
 export default App;
